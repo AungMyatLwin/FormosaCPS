@@ -12,11 +12,11 @@
 <nav class="col-s-4 col-12 navbar">
 <div >
 	<img src="./img/logo1(1).png" class="col-1 imgWidth">
-	<input type="text" value="Search Your Favourite Products" class="col-8 textWidth">
+	<input type="text" placeholder="Search Your Favourite Products" class="col-8 textWidth">
 	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;">
 </div>
 	<ul>
-		<li><a href="./index.html">Home</a></li>
+		<li ><a href="./index.html" class="active">Home</a></li>
 		<li><a href="#">Product</a></li>
 		<li><a href="#">Add to Cart</a></li>
 		<li><a href="#">About</a></li>
@@ -27,7 +27,7 @@
 <!-- shows up when width is lower than 600, as a replacement for nav with text -->
 <nav class="col-s-1 iconsNav">
 	<ul>
-		<li><a href="./index.html"><img src="./img/navLogos/home.png" class="col-s-6 nvImg"></a></li>
+		<li><a href="./index.html"><img src="./img/navLogos/home.png" class="col-s-8 nvImg"></a></li>
 		<li><a href="#"><img src="./img/navLogos/box.png" class="col-s-6 nvImg"></a></li>
 		<li><a href="#"><img src="./img/navLogos/add-to-cart.png" class="col-s-6 nvImg"></a></li>
 		<li><a href="#"><img src="./img/navLogos/information.png" class="col-s-6	nvImg"></a></li>
@@ -59,18 +59,18 @@
 	<div class="overlay col-5	col-s-7">
 		<p class="textNameSmall">Pantha Sleeping Bag</p>
 		<p class="textName">Pantha Sleeping Bag</p>
-		<p class="textDiscount"><del>$458.99</del> $93.99</p>
+		<p class="textDiscount"><del class="delPrice">$458.99</del> $93.99</p>
 		<img class="col-s-6 col-7 imgProperty" src="./img/SleepingBag/sleepingbag6.png">
-		<p class="priceText"><del>$458.99</del> $93.99</p>
+		<p class="priceText"><del class="delPrice">$458.99</del> $93.99</p>
 		<button class="col-3 btnProperty">Buy Now</button>
 	</div>
 
 		<div class="overlay col-5	col-s-7">
 			<p class="textNameSmall">Water Carrier</p>
 		<p class="textName">Water Carrier</p>
-		<p class="textDiscount"><del>$200.99</del> $93.99</p>
+		<p class="textDiscount"><del class="delPrice">$200.99</del> $93.99</p>
 		<img class="col-s-6 col-7 imgProperty" src="./img/WaterCarrier/waterCarrier1.jpg">
-		<p class="priceText"><del>$200.99</del> $93.99</p>
+		<p class="priceText"><del class="delPrice">$200.99</del> $93.99</p>
 		<button class="col-3 btnProperty">Buy Now</button>
 	</div>
 
@@ -78,9 +78,9 @@
 		<div class="overlay col-5	col-s-7">
 			<p class="textNameSmall">3-Burner Stove</p>
 		<p class="textName">3-Burner Stove</p>
-		<p class="textDiscount"><del>$132.99</del> $64.99</p>
+		<p class="textDiscount"><del class="delPrice">$132.99</del> $64.99</p>
 		<img class="col-s-6 col-7 imgProperty" src="./img/Stove/stove.jpg">
-		<p class="priceText"><del>$132.99</del> $64.99</p>
+		<p class="priceText"><del class="delPrice">$132.99</del> $64.99</p>
 		<button class="col-3 btnProperty">Buy Now</button>
 	</div>
 
@@ -88,12 +88,11 @@
 		<div class="overlay col-5	col-s-7">
 			<p class="textNameSmall">A998 Tent</p>
 		<p class="textName">A998 Tent</p>
-		<p class="textDiscount"><del>$988.99</del> $699.99</p>
+		<p class="textDiscount"><del class="delPrice">$988.99</del> $699.99</p>
 		<img class="col-s-6 col-7 imgProperty" src="./img/Tent/tent1.jpg">
-		<p class="priceText"><del>$988.99</del> $699.99</p>
+		<p class="priceText"><del class="delPrice">$988.99</del> $699.99</p>
 		<button class="col-3 btnProperty">Buy Now</button>
 	</div>
-
 	</div>
 </div>
 
@@ -102,46 +101,46 @@
 <div class="col-10 col-s-12 itemsList">
 
 	<div class="col-5 col-s-5 cardItems">
-		<p class="col-4 col-s-5">A998 Tent</p>
+		<p class="col-4 col-s-8">A998 Tent</p>
 	<img src="./img/Tent/tent1.jpg" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-3 col-s-6">Add To Cart</button>
+	<button class="col-4 col-s-7">Add To Cart</button>
 	</div>
 
 
 	<div class="col-5 col-s-5 cardItems">
-		<p class="col-4 col-s-5">Sleeping Bag</p>
+		<p class="col-4 col-s-8">Sleeping Bag</p>
 	<img src="./img/SleepingBag/sleepingbag6.png" class="col-7 col-s-9 imgSize">
 	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-3 col-s-6">Add To Cart</button>
+	<button class="col-4 col-s-7">Add To Cart</button>
 	</div>
 
 	<div class="col-5 col-s-5 cardItems">
-		<p class="col-4 col-s-5">Camping Chair</p>
+		<p class="col-5 col-s-8">Camping Chair</p>
 	<img src="./img/Chair/campChair.jpg" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$89.99</p>
-	<button class="col-3 col-s-6">Add To Cart</button>
+	<button class="col-5 col-s-7">Add To Cart</button>
 	</div>
 
 	<div class="col-5 col-s-5 cardItems">
-		<p class="col-4 col-s-5">Yeti Cooler</p>
+		<p class="col-5 col-s-8">Yeti Cooler</p>
 	<img src="./img/cooler/yetiCooler1.png" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$23.99</p>
-	<button class="col-3 col-s-6">Add To Cart</button>
+	<button class="col-5 col-s-7">Add To Cart</button>
 	</div>
 
 	<div class="col-5 col-s-5 cardItems">
-		<p class="col-4 col-s-5">Water Carrier</p>
+		<p class="col-5 col-s-8">Water Carrier</p>
 	<img src="./img/WaterCarrier/waterCarrier1.jpg" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-3 col-s-6">Add To Cart</button>
+	<button class="col-5 col-s-7">Add To Cart</button>
 	</div>
 
 	<div class="col-5 col-s-5 cardItems">
-		<p class="col-4 col-s-5">3-Burner Stove</p>
+		<p class="col-5 col-s-8">3-Burner Stove</p>
 	<img src="./img/Stove/stove.jpg" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$64.99</p>
-	<button class="col-3 col-s-6">Add To Cart</button>
+	<button class="col-5 col-s-7">Add To Cart</button>
 	</div>
 
 
@@ -174,7 +173,7 @@
 		</div>
 
 
-	<div class="col-5 col-s-12 columnAlign ">
+	<div class="col-6 col-s-12 columnAlign ">
 		<p>Formosa Fabella Naturae</p>
 		<p>&copy;2025 Aung Myat Lwin</p>
 	</div>
@@ -187,7 +186,7 @@
 		
 	</div>
 
-		<div class="col-5 col-s-2 columnAlign ">
+		<div class="col-6 col-s-2 columnAlign ">
 		<p>Email Us</p>
 		<p>formosaSilva@gmail.com</p>
 		<p>formosaMulier@gmail.com</p>
@@ -197,7 +196,6 @@
 
 
 <script>
-
 let elements = document.getElementsByClassName("mySlides");
 let initialVariable = 0;
 let opacity = 1;
@@ -221,6 +219,7 @@ setTimeout(()=>{
 }
 
 slider()
+
 </script>
 
 </body>
