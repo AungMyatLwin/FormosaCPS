@@ -169,7 +169,7 @@
 	/*width: 120px;*/
 	height: 180px;
 	object-fit: scale-down;
-	background-image: linear-gradient(to bottom right,#F0BB78, #F5ECD5);
+/* 	background-image: linear-gradient(to bottom right,#F0BB78, #F5ECD5); */
 }
 
 .iconsNav{
