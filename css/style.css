@@ -71,7 +71,9 @@
 	list-style: none;
 	margin:10px;
 }
-
+#active{
+	text-decoration: underline;
+}
 
 .navbar ul li a{
 	text-decoration: none;
@@ -91,6 +93,7 @@
 	background-color: #F0BB78;
 	font-size: 18px;
 		box-shadow: 2px 2px 5px #F0BB78;
+			/*text-decoration: underline;*/
 }
 
 
