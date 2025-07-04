@@ -150,7 +150,11 @@
 /*promotion content*/
 
 .h3Cls{
-	padding: 20px; color: #626F47; font-size: 50px;
+	padding: 20px;
+	 color: #626F47; font-size: 50px;
+	display: flex;
+	justify-content: center;  align-items: center;
+
 }
 .promotion-content{
 	background-image: linear-gradient(to bottom right,#F0BB78, #BAB66A);
