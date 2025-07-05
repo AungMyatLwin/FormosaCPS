@@ -371,6 +371,73 @@ del{
 }
 
 
+
+
+
+/* Login Page */
+.divOverall{
+	padding: 60px; 
+	margin-top: 30px;
+	margin-bottom: 30px; 
+	margin-left: 60px; 
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	background-color: #F0BB78; 
+	border-radius: 20px;"
+}
+
+.loginDiv{
+	background-color:#F0BB78 ;
+	box-shadow: 5px 5px 5px #626F47;
+	border-radius: 20px;
+}
+
+.loginItems{
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	flex-direction: column; 
+	padding: 20px; 
+	border-radius: 20px;
+	background-color: #F5ECD5;
+}
+.loginItems h3{
+	color: #626F47;
+}
+
+.loginItems input{
+	margin: 10px;
+	 border-radius:20px; 
+	 padding: 10px;
+	 text-align: center;
+}
+input[type=text]{
+	color: #626F47;
+
+}
+input[type=password]{
+	color: #626F47;
+}
+::placeholder{
+	color: #626F47;
+	opacity: 0.9;
+}
+.buttonBorder{
+	padding:7px; 
+	border-radius: 20px;
+	color: #626F47;
+}
+.loginItems p{
+	color: #626F47;
+}
+
+/* Register */
+input[type='radio']{
+	accent-color: #626F47;
+}
+
+
 /* Responsive  */
 @media only screen and (max-width: 860px) 
 { 
