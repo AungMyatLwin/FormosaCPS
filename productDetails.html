@@ -1,164 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Formosa Fabella Naturae</title>
 	<link rel="icon" href="./img/logo1(1).png">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="col-12">
+<body class="col-12 col-s-12">
 	<!-- navbar -->
 <nav class="col-s-4 col-12 navbar">
 <div >
-	<img src="./img/logo1(1).png" class="col-1 imgWidth">
+	<img src="./img/logo1(1).png" alt="Company's Logo" class="col-1 imgWidth">
 	<input type="text" placeholder="Search Your Favourite Products" class="col-10 textWidth" id="search">
 	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;">
 </div>
 	<ul>
 		<li ><a href="./index.html" id="active">Home</a></li>
 		<li><a href="./salesProduct.html">Product</a></li>
-		<li><a href="./checkout.html">Add to Cart</a></li>
+		<li><a href="./checkout.html">Cart</a></li>
 		<li><a href="./aboutUs.html">About</a></li>
 		<li><a href="./contactUs.html">Contact</a></li>
+		<li><a href="./feedback.html">Feedback</a></li>
 		<li><a href="./login.html">Sign-In</a></li>
 	</ul>
 </nav>
+
+<div class="col-12 col-s-12">
+	<div class="col-11 col-11" style="display: flex; justify-content: center; align-items: center;">		<img src="./img/Chair/campChair.jpg" class="col-1 col-s-1">
+		<div class="col-5 col-s-5" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+			<p>Camping Chair</p>
+			<p>$</p>
+		</div>
+	</div>
+</div>
 
 <!-- shows up when width is lower than 600, as a replacement for nav with text -->
 <nav class="col-s-1 iconsNav">
 	<ul>
 		<li>
-			<a href="./index.html"><img src="./img/navLogos/home.png" class="col-s-8 nvImg"></a>
+			<a href="./index.html"><img src="./img/navLogos/home.png" alt="index logo" class="col-s-8 nvImg"></a>
 		</li>
-		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" class="col-s-6 nvImg"></a></li>
-		<li><a href="checkout.html"><img src="./img/navLogos/add-to-cart.png" class="col-s-6 nvImg"></a></li>
-		<li><a href="./aboutUs.html"><img src="./img/navLogos/information.png" class="col-s-6	nvImg"></a></li>
-		<li><a href="./contactUs.html"><img src="./img/navLogos/contact.png" class="col-s-6 nvImg"></a></li>
-		<li><a href="./login.html"><img src="./img/navLogos/contact.png" class="col-s-6 nvImg"></a></li>
+		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" alt="products logo" class="col-s-6 nvImg"></a></li>
+		<li><a href="checkout.html"><img src="./img/navLogos/add-to-cart.png"  alt="cart logo" class="col-s-6 nvImg"></a></li>
+		<li><a href="./aboutUs.html"><img src="./img/navLogos/information.png" alt="about us logo" class="col-s-6	nvImg"></a></li>
+		<li><a href="./contactUs.html"><img src="./img/navLogos/contact.png"  alt="contact us logo" class="col-s-6 nvImg"></a></li>
+		<li><a href="./feedback.html"><img src="./img/navLogos/feedback.png" alt="feedback logo logo" class="col-s-6 nvImg"></a></li>
+		<li><a href="./login.html"><img src="./img/navLogos/log-in.png" alt="login logo" class="col-s-6 nvImg"></a></li>
 	</ul>
 </nav>
-	
-<!-- Introduction -->
-<div class="col-11 col-s-12 introCls"> 
-	<h2 class="col-7 col-s-7">Formosa Fabella Naturae</h2>
-	<p class="col-8 col-s-7">Where La Fernweh Findet Pacem In Naturā.</p>
 
-	<!-- slider -->
-<div class="slide-content w3-display-container col-12 col-s-12" id="sliderOnClick">
-  <img class="col-6 col-s-10 mySlides" src="./img/slide5.jpg">
-  <img class="col-6 col-s-10 mySlides" src="./img/slide2.jpg" >
-  <img class="col-6 col-s-10 mySlides" src="./img/slide3.jpg" >
-  <img class="col-6 col-s-10 mySlides" src="./img/slide6.jpg" >
-</div>
-
-</div>
-
-
-
-
-<h3 class="col-12 col-s-12 h3Cls">Popular Items</h3>
-
-<!-- popular items -->
-<div class="col-10 col-s-12 promotion-content">
-
-	<div class="overlay col-5	col-s-7">
-		<p class="textNameSmall">Pantha Sleeping Bag</p>
-		<p class="textName">Pantha Sleeping Bag</p>
-		<p class="textDiscount"><del class="delPrice">$458.99</del> $93.99</p>
-		<img class="col-s-6 col-7 imgProperty" src="./img/SleepingBag/sleepingbag6.png">
-		<p class="priceText"><del class="delPrice">$458.99</del> $93.99</p>
-		<button class="col-3 btnProperty">Buy Now</button>
-	</div>
-
-		<div class="overlay col-5	col-s-7">
-			<p class="textNameSmall">Water Carrier</p>
-		<p class="textName">Water Carrier</p>
-		<p class="textDiscount"><del class="delPrice">$200.99</del> $93.99</p>
-		<img class="col-s-6 col-7 imgProperty" src="./img/WaterCarrier/waterCarrier1.jpg">
-		<p class="priceText"><del class="delPrice">$200.99</del> $93.99</p>
-		<button class="col-3 btnProperty">Buy Now</button>
-	</div>
-
-
-		<div class="overlay col-5	col-s-7">
-			<p class="textNameSmall">3-Burner Stove</p>
-		<p class="textName">3-Burner Stove</p>
-		<p class="textDiscount"><del class="delPrice">$132.99</del> $64.99</p>
-		<img class="col-s-6 col-7 imgProperty" src="./img/Stove/stove.jpg">
-		<p class="priceText"><del class="delPrice">$132.99</del> $64.99</p>
-		<button class="col-3 btnProperty">Buy Now</button>
-	</div>
-
-
-		<div class="overlay col-5	col-s-7">
-			<p class="textNameSmall">A998 Tent</p>
-		<p class="textName">A998 Tent</p>
-		<p class="textDiscount"><del class="delPrice">$988.99</del> $699.99</p>
-		<img class="col-s-6 col-7 imgProperty" src="./img/Tent/tent1.jpg">
-		<p class="priceText"><del class="delPrice">$988.99</del> $699.99</p>
-		<button class="col-3 btnProperty">Buy Now</button>
-	</div>
-	</div>
-</div>
-
-<!-- list of items -->
-<h3 class="col-12 col-s-12 h3Cls">Gears</h3>
-<div class="col-10 col-s-12 itemsList">
-
-	<div class="col-5 col-s-5 cardItems">
-		<p class="col-4 col-s-8">A998 Tent</p>
-	<img src="./img/Tent/tent1.jpg" class="col-7 col-s-9">
-	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-4 col-s-7">Add To Cart</button>
-	</div>
-
-
-	<div class="col-5 col-s-5 cardItems">
-		<p class="col-4 col-s-8">Sleeping Bag</p>
-	<img src="./img/SleepingBag/sleepingbag6.png" class="col-7 col-s-9 imgSize">
-	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-4 col-s-7">Add To Cart</button>
-	</div>
-
-	<div class="col-5 col-s-5 cardItems">
-		<p class="col-5 col-s-8">Camping Chair</p>
-	<img src="./img/Chair/campChair.jpg" class="col-7 col-s-9">
-	<p class="col-4 col-s-5">$89.99</p>
-	<button class="col-5 col-s-7">Add To Cart</button>
-	</div>
-
-	<div class="col-5 col-s-5 cardItems">
-		<p class="col-5 col-s-8">Yeti Cooler</p>
-	<img src="./img/cooler/yetiCooler1.png" class="col-7 col-s-9">
-	<p class="col-4 col-s-5">$23.99</p>
-	<button class="col-5 col-s-7">Add To Cart</button>
-	</div>
-
-	<div class="col-5 col-s-5 cardItems">
-		<p class="col-5 col-s-8">Water Carrier</p>
-	<img src="./img/WaterCarrier/waterCarrier1.jpg" class="col-7 col-s-9">
-	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-5 col-s-7">Add To Cart</button>
-	</div>
-
-	<div class="col-5 col-s-5 cardItems">
-		<p class="col-5 col-s-8">3-Burner Stove</p>
-	<img src="./img/Stove/stove.jpg" class="col-7 col-s-9">
-	<p class="col-4 col-s-5">$64.99</p>
-	<button class="col-5 col-s-7">Add To Cart</button>
-	</div>
-
-
-</div>
 
 
 <!-- when screen is below 600 this footer will display -->
-<footer class="col-s-12 footerWhenSmall">
-	<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" class="imgIconSocialMedia"></a>
-				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" class="imgIconSocialMedia"></a>
+<footer class="col-s-12 footerWhenSmall" aria-hidden="false">
+	<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="facebook" class="imgIconSocialMedia"></a>
+				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" alt="twitter" class="imgIconSocialMedia"></a>
+				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" alt="reddit" class="imgIconSocialMedia"></a>
+				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" alt="youtube" class="imgIconSocialMedia"></a>
 			<div>
 			<p>Formosa Fabella Naturae</p>
 		<p>&copy;2025 Aung Myat Lwin</p>
@@ -175,10 +75,10 @@
 
 		<div class="socialMediaIcons">
 			<p class="col-s-2 followUs">FOLLOW US</p>
-				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" class="imgIconSocialMedia"></a>
-				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" class="imgIconSocialMedia"></a>
+				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="facebook" class="imgIconSocialMedia"></a>
+				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" alt="twitter" class="imgIconSocialMedia"></a>
+				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" alt="reddit" class="imgIconSocialMedia"></a>
+				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" alt="youtube" class="imgIconSocialMedia"></a>
 		 </div>
 		</div>
 
@@ -205,41 +105,6 @@
 		<p>CatullusAmat@clodiam.com</p>
 	</div>
 </footer>
-
-
-<script>
-let elements = document.getElementsByClassName("mySlides");
-let initialVariable = 0;
-let opacity = 1;
-
-const slider=()=>{
-for(let i=0; i<elements.length;i++){
-	elements[i].style.display = "none";
-}
-
-initialVariable = (initialVariable+1)%elements.length;
-elements[initialVariable].style.opacity= 1;
-elements[initialVariable].style.display = "block";
-elements[initialVariable].style.borderRadius = "20px";
-elements[initialVariable].style.height = "400px";
-elements[initialVariable].style.objectFit = "fit";
-
-console.log(elements[initialVariable],elements[initialVariable].src )
-// if(elements[initialVariable].src == "./img/slide6.jpg"){
-// 	elements[initialVariable].style.height="40px";
-// }
-
-elements[initialVariable].style.boxShadow = "2px 8px 3px #F0BB78 ";
-setTimeout(()=>{
-	elements[initialVariable].style.opacity= 0.5;
-},1800)
-
-	setTimeout(slider,2000)
-}
-
-slider()
-
-</script>
 
 </body>
 </html>
