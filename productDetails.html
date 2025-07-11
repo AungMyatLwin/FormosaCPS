@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="col-12 col-s-12">
+<body class="col-12">
 	<!-- navbar -->
 <nav class="col-s-4 col-12 navbar">
 <div >
@@ -27,20 +27,11 @@
 	</ul>
 </nav>
 
-<div class="col-12 col-s-12">
-	<div class="col-11 col-11" style="display: flex; justify-content: center; align-items: center;">		<img src="./img/Chair/campChair.jpg" class="col-1 col-s-1">
-		<div class="col-5 col-s-5" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-			<p>Camping Chair</p>
-			<p>$</p>
-		</div>
-	</div>
-</div>
-
 <!-- shows up when width is lower than 600, as a replacement for nav with text -->
 <nav class="col-s-1 iconsNav">
 	<ul>
 		<li>
-			<a href="./index.html"><img src="./img/navLogos/home.png" alt="index logo" class="col-s-8 nvImg"></a>
+			<a href="./index.html"><img src="./img/navLogos/home.png" alt="index logo" class="col-s-8 nvImg"  style="transform: scale(2)"></a>
 		</li>
 		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" alt="products logo" class="col-s-6 nvImg"></a></li>
 		<li><a href="checkout.html"><img src="./img/navLogos/add-to-cart.png"  alt="cart logo" class="col-s-6 nvImg"></a></li>
@@ -52,20 +43,127 @@
 </nav>
 
 
+<!-- Product Detail -->
+<div class="col-s-12 col-12 productDetailOuterDiv">
+	<div class="col-s-12 col-9 productDetailInnerDiv" >
+
+		<div class="col-1 col-s-6 productDetailMainDiv">
+			<img  onclick="touch('0deg')" class="col-8 col-s-7 smallImg" src="./img/camera/camera1.jpg" id="smallImg1" >
+			<img onclick="touch('90deg')"class="col-8 col-s-7 smallImg" src="./img/camera/camera1.jpg"id="smallImg2" style="transform: rotate(90deg);">
+			<img onclick="touch('180deg')"  class="col-8 col-s-7 smallImg" src="./img/camera/camera1.jpg" id="smallImg3" style="transform: rotate(180deg);">
+		</div>
+
+		<div class="col-6 col-s-11 mainImgProductDetail">
+			<img class="col-12 col-s-10" src="./img/camera/camera1.jpg" id="mainImg">
+		</div>
+
+	</div>
+
+	<div class="col-9 col-s-12 ProductDetailInfo">
+			<p  id="itemName">Item Name</p>
+			<p id="price" >Item Price</p>		
+			<p id="details" >details</p>
+			<button onclick="itemsAddtoCart()">Add to Cart</button>
+		</div>
+</div>
+
+<!-- Other Items -->
+<div class="col-s-12 col-12 otherItemsOuterDiv"> 
+
+	
+
+
+<div class="col-3 col-s-8 imgItemsOtherDiv" id="item1" onclick="itemSet(1)">
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">1</p>
+		<p class="col-6 col-s-12 p2">$29</p>
+		</div>
+	</div>
+
+
+<div class="col-3 col-s-8 imgItemsOtherDiv" id="item2" onclick="itemSet(2)">
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">2</p>
+		<p class="col-6 col-s-12 p2">$2</p>
+		</div>
+	</div>
+
+
+<div class="col-3 col-s-8 imgItemsOtherDiv" id="item3" onclick="itemSet(3)">
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">3-Burner Stove</p>
+		<p class="col-6 col-s-12 p2">$64.99</p>
+		</div>
+	</div>
+
+
+<div class="col-3 col-s-8 imgItemsOtherDiv" id="item4" onclick="itemSet(4)">
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">3-Burner Stove</p>
+		<p class="col-6 col-s-12 p2">$64.99</p>
+		</div>
+	</div>
+<div class="col-3 col-s-8 imgItemsOtherDiv" id="item6" onclick="itemSet(6)" >
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">4</p>
+		<p class="col-6 col-s-12 p2">$49</p>
+		</div>
+	</div>
+<div class="col-3 col-s-8 imgItemsOtherDiv" id="item5" onclick="itemSet(5)">
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">5-Burner Stove</p>
+		<p class="col-6 col-s-12 p2">$5</p>
+		</div>
+	</div>
+	<div class="col-3 col-s-8 imgItemsOtherDiv" id="item8" onclick="itemSet(8)">
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">5-Burner Stove</p>
+		<p class="col-6 col-s-12 p2">$5</p>
+		</div>
+	</div>
+	<div class="col-3 col-s-8 imgItemsOtherDiv" id="item7" onclick="itemSet(7)">
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">5-Burner Stove</p>
+		<p class="col-6 col-s-12 p2">$5</p>
+		</div>
+	</div>
+	<div class="col-3 col-s-8 imgItemsOtherDiv" id="item9" onclick="itemSet(9)">
+		<img src="./img/Stove/stove.jpg" class="col-3 col-s-7 img" >
+		<div class="col-7 col-s-4 innerDivOtherItem">
+			<p class="col-12 col-s-12 p1">5-Burner Stove</p>
+		<p class="col-6 col-s-12 p2">$5</p>
+		</div>
+	</div>
+
+
+	
+</div>
+
 
 <!-- when screen is below 600 this footer will display -->
 <footer class="col-s-12 footerWhenSmall" aria-hidden="false">
-	<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="facebook" class="imgIconSocialMedia"></a>
+	<div class="col-s-8">
+				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="facebook" class="imgIconSocialMedia"></a>
 				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" alt="twitter" class="imgIconSocialMedia"></a>
 				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" alt="reddit" class="imgIconSocialMedia"></a>
 				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" alt="youtube" class="imgIconSocialMedia"></a>
-			<div>
-			<p>Formosa Fabella Naturae</p>
-		<p>&copy;2025 Aung Myat Lwin</p>
-			<a href="./privacy.html"><p>Privacy</p></a>
-		<p>all rights reserved</p>
+	</div>
+			<div class="col-s-12">
+				<p>Formosa Fabella Naturae</p>
+				<p>&copy;2025 Aung Myat Lwin</p>
+				<a href="./privacy.html"><p>Privacy</p></a>
+				<p>all rights reserved</p>
 		</div>
 </footer>
+
 
 
 
@@ -105,6 +203,158 @@
 		<p>CatullusAmat@clodiam.com</p>
 	</div>
 </footer>
+<script>
 
+const itemsAddtoCart=()=>{
+	let name = document.getElementById('itemName').textContent
+	const items=JSON.parse(localStorage.getItem("AddtoCart"))||[];
+		items.push(name)
+		localStorage.setItem("AddtoCart",JSON.stringify(items));
+
+		window.location.href = './checkout.html'
+}
+
+let randomObjs = [
+	{
+		"itemSrc":"./img/camera/camera1.jpg",
+	"itemName":"Black Camera",
+	"itemPrice":"$200.99",
+},
+{
+	"itemSrc":"./img/Chair/campChair.jpg",
+	"itemName":"Foldable Camp Chair",
+	"itemPrice":" $34.50"
+},
+{
+	"itemSrc":"./img/camera/camera2.jpg",
+	"itemName":"Blue Camera",
+	"itemPrice":" $77.99"
+},
+{
+	"itemSrc":"./img/camera/camera3.jpg",
+	"itemName":"Silver Camera",
+	"itemPrice":" $88.99"
+},
+{
+	"itemSrc":"./img/camera/camera4.jpg",
+	"itemName":"Camera R333D",
+	"itemPrice":" $99.99"
+},
+{
+	"itemSrc":"./img/Stove/stove.jpg",
+	"itemName":"Stove",
+	"itemPrice":" $999.99"
+},
+{
+	"itemSrc":"./img/WaterCarrier/watercarrier1.jpg",
+	"itemName":"Water Carrier",
+	"itemPrice":" $39.99"
+},
+{
+	"itemSrc":"./img/SleepingBag/SleepingBag6.jpeg",
+	"itemName":"Sleeping Bag",
+	"itemPrice":" $70.99"
+},
+{
+	"itemSrc":"./img/cooler/yetiCooler.jpg",
+	"itemName":"Yeti Cooler",
+	"itemPrice":" $60.88"
+},
+]
+
+function itemSet(item){
+	let index = document.getElementById("item"+item)
+	let pname = index.querySelector(".p1").textContent;
+	let pPrice = index.querySelector(".p2").textContent;
+	let imgSrc= index.querySelector("img")?.getAttribute("src");
+
+	console.log(pname,pPrice,imgSrc)
+	localStorage.setItem("DetailItem",JSON.stringify({
+			"image":imgSrc,
+			"title":pname,
+			"price":pPrice,
+			"seller":"By Aung"
+		}));
+	window.location.href="./productDetails.html";
+}
+
+function settingRandomItems(){
+	let img = document.querySelectorAll(".img");
+	let pName= document.querySelectorAll(".p1");
+	console.log(pName)
+	let pPrice = document.querySelectorAll(".p2");
+	let count=0;
+	img.forEach(index=>{
+		let lastRand=0;
+		let rand = Math.floor(Math.random(0,randomObjs.length-1)*randomObjs.length);
+		if(lastRand===rand){
+			 rand = Math.floor(Math.random(0,randomObjs.length-1)*randomObjs.length);
+			 lastRand=rand;
+			};
+		
+		index.src=randomObjs[rand].itemSrc;
+		pName[count].innerText=randomObjs[rand].itemName;
+		pPrice[count].innerText=randomObjs[rand].itemPrice;
+		count++
+	})
+
+}
+
+settingRandomItems()
+
+function hoverMainImg(){
+	let img=document.getElementById('mainImg')
+
+	img.addEventListener('mouseover',(e)=>{
+		img.style.scale=2;
+	})
+	img.addEventListener('mouseout',(e)=>{
+		img.style.scale=1;
+	})
+
+}	
+hoverMainImg()
+function touch(transfrom){
+	document.getElementById(
+		'mainImg').style.rotate=transfrom;
+}
+
+function displayItemInImgs(){
+
+	let detailItems = JSON.parse(localStorage.getItem("DetailItem"))
+	let smallImages = [document.getElementById("smallImg1"),document.getElementById("smallImg2"),document.getElementById("smallImg3")];
+	smallImages.forEach(img=>{
+		img.src=detailItems["image"]
+		console.log(img.src)
+	})
+	let bigImg = document.getElementById('mainImg')
+	bigImg.src= detailItems["image"]
+	let title = document.getElementById('itemName')
+	let price = document.getElementById('price')
+		title.textContent = detailItems['title']
+		price.textContent = detailItems['price']
+	let detail = document.getElementById('details')
+
+	const adventurePhrases = [
+	  "beneath cloud-shadowed ridges",
+	  "beyond the tree line where silence lingers",
+	  "with nothing but starlight to guide you",
+	  "through windswept pine and breathless dusk",
+	  "into the hush of moss-covered trails",
+	  "across frostbitten valleys veiled in mist",
+	  "in the golden hush before first light",
+	  "with echoes of forgotten paths in your wake",
+	  "on sun-drenched slopes that forget names",
+	  "under skies that have never been charted"
+	];
+	let phraseIndex = Math.floor(Math.random()*adventurePhrases.length);
+	console.log(phraseIndex)
+
+	detail.innerHTML = `Available now—crafted for resilient elegance. Whether you're setting out for adventure <b><i>${adventurePhrases[phraseIndex]}</i> </b>or settling into comfort near a flickering hearth, the <b><i>${detailItems['title']}</i></b> delivers essential value with timeless appeal. Add it to your gear, your space, or your story.`
+
+}
+
+displayItemInImgs();
+</script>
 </body>
 </html>

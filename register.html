@@ -29,7 +29,7 @@
 <nav class="col-s-1 iconsNav">
 	<ul>
 		<li>
-			<a href="./index.html"><img src="./img/navLogos/home.png" class="col-s-8 nvImg"></a>
+			<a href="./index.html"><img src="./img/navLogos/home.png" class="col-s-8 nvImg" style="transform: scale(2);"></a>
 		</li>
 		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" class="col-s-6 nvImg"></a></li>
 		<!-- <li><a href="checkout.html"><img src="./img/navLogos/add-to-cart.png" class="col-s-6 nvImg"></a></li> -->
@@ -87,19 +87,23 @@
 
 
 <!-- when screen is below 600 this footer will display -->
-<footer class="col-s-12 footerWhenSmall" aria-hidden="false" >
-	<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" class="imgIconSocialMedia"></a>
-				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" class="imgIconSocialMedia"></a>
-				<div>
-			<p>Formosa Fabella Naturae</p>
-		<p>&copy;2025 Aung Myat Lwin</p>
-			<a href="./privacy.html"><p>Privacy</p></a>
-		<p>all rights reserved</p>
-		</div>
 
+<!-- when screen is below 600 this footer will display -->
+<footer class="col-s-12 footerWhenSmall" aria-hidden="false">
+	<div class="col-s-8">
+				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="facebook" class="imgIconSocialMedia"></a>
+				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" alt="twitter" class="imgIconSocialMedia"></a>
+				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" alt="reddit" class="imgIconSocialMedia"></a>
+				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" alt="youtube" class="imgIconSocialMedia"></a>
+	</div>
+			<div class="col-s-12">
+				<p>Formosa Fabella Naturae</p>
+				<p>&copy;2025 Aung Myat Lwin</p>
+				<a href="./privacy.html"><p>Privacy</p></a>
+				<p>all rights reserved</p>
+		</div>
 </footer>
+
 
 
 
@@ -139,10 +143,7 @@
 		<p>CatullusAmat@clodiam.com</p>
 	</div>
 </footer>
-<script>
-		const search = document.querySelectorAll(".hideIf");
-	console.log(search)
-	search.forEach(x=> x.style.display='none');
+<script src="./js/script.js">
 </script>
 </body>
 </html>

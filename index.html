@@ -31,7 +31,7 @@
 <nav class="col-s-1 iconsNav">
 	<ul>
 		<li>
-			<a href="./index.html"><img src="./img/navLogos/home.png" alt="index logo" class="col-s-8 nvImg"></a>
+			<a href="./index.html"><img src="./img/navLogos/home.png" alt="index logo" class="col-s-8 nvImg" style="transform: scale(2)"></a>
 		</li>
 		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" alt="products logo" class="col-s-6 nvImg"></a></li>
 		<li><a href="checkout.html"><img src="./img/navLogos/add-to-cart.png"  alt="cart logo" class="col-s-6 nvImg"></a></li>
@@ -157,15 +157,17 @@
 
 <!-- when screen is below 600 this footer will display -->
 <footer class="col-s-12 footerWhenSmall" aria-hidden="false">
-	<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="facebook" class="imgIconSocialMedia"></a>
+	<div class="col-s-8">
+				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="facebook" class="imgIconSocialMedia"></a>
 				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" alt="twitter" class="imgIconSocialMedia"></a>
 				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" alt="reddit" class="imgIconSocialMedia"></a>
 				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" alt="youtube" class="imgIconSocialMedia"></a>
-			<div>
-			<p>Formosa Fabella Naturae</p>
-		<p>&copy;2025 Aung Myat Lwin</p>
-			<a href="./privacy.html"><p>Privacy</p></a>
-		<p>all rights reserved</p>
+	</div>
+			<div class="col-s-12">
+				<p>Formosa Fabella Naturae</p>
+				<p>&copy;2025 Aung Myat Lwin</p>
+				<a href="./privacy.html"><p>Privacy</p></a>
+				<p>all rights reserved</p>
 		</div>
 </footer>
 
@@ -209,38 +211,7 @@
 </footer>
 
 
-<script>
-let elements = document.getElementsByClassName("mySlides");
-let initialVariable = 0;
-let opacity = 1;
-
-const slider=()=>{
-for(let i=0; i<elements.length;i++){
-	elements[i].style.display = "none";
-}
-
-initialVariable = (initialVariable+1)%elements.length;
-elements[initialVariable].style.opacity= 1;
-elements[initialVariable].style.display = "block";
-elements[initialVariable].style.borderRadius = "20px";
-elements[initialVariable].style.height = "400px";
-elements[initialVariable].style.objectFit = "fit";
-
-console.log(elements[initialVariable],elements[initialVariable].src )
-// if(elements[initialVariable].src == "./img/slide6.jpg"){
-// 	elements[initialVariable].style.height="40px";
-// }
-
-elements[initialVariable].style.boxShadow = "2px 8px 3px #F0BB78 ";
-setTimeout(()=>{
-	elements[initialVariable].style.opacity= 0.5;
-},1800)
-
-	setTimeout(slider,2000)
-}
-
-slider()
-
+<script src="./js/script.js">
 </script>
 
 </body>
