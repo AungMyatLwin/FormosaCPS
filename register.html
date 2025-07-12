@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Formosa Fabella Naturae</title>
 	<link rel="icon" href="./img/logo1(1).png">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
 </head>
 <body class="col-12">
 	<!-- navbar -->
 <nav class="col-s-4 col-12 navbar">
 <div >
-	<img src="./img/logo1(1).png" class="col-2 imgWidth">
-	<input type="text" placeholder="Search Your Favourite Products" class="col-10 textWidth hideIf">
-	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;" class="hideIf">
+	<img src="./img/logo1(1).png" alt="logo" class="col-2 imgWidth">
+	<input type="text" placeholder="Search Your Favourite Products" class="col-10 textWidth hideIf" id="search">
+	<input type="image"  src="./img/search.png" class="hideIf" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;">
 </div>
 	<ul>
 		<li ><a href="./index.html" >Home</a></li>
@@ -29,16 +30,17 @@
 <nav class="col-s-1 iconsNav">
 	<ul>
 		<li>
-			<a href="./index.html"><img src="./img/navLogos/home.png" class="col-s-8 nvImg" style="transform: scale(2);"></a>
+			<a href="./index.html"><img src="./img/navLogos/home.png" alt="home" style="transform: scale(2);" class="col-s-8 nvImg"></a>
 		</li>
-		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" class="col-s-6 nvImg"></a></li>
+		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" alt="products" class="col-s-6 nvImg"></a></li>
 		<!-- <li><a href="checkout.html"><img src="./img/navLogos/add-to-cart.png" class="col-s-6 nvImg"></a></li> -->
-		<li><a href="./aboutUs.html"><img src="./img/navLogos/information.png" class="col-s-6	nvImg"></a></li>
-		<li><a href="./contactUs.html"><img src="./img/navLogos/contact.png" class="col-s-6 nvImg"></a></li>
-		<li><a href="./feedback.html"><img src="./img/navLogos/feedback.png" class="col-s-6 nvImg"></a></li>
+		<li><a href="./aboutUs.html"><img src="./img/navLogos/information.png" alt="about" class="col-s-6	nvImg"></a></li>
+		<li><a href="./contactUs.html"><img src="./img/navLogos/contact.png" alt="contact" class="col-s-6 nvImg"></a></li>
+		<li><a href="./feedback.html"><img src="./img/navLogos/feedback.png" alt="feedback" class="col-s-6 nvImg"></a></li>
 		<!-- <li><a href="./login.html"><img src="./img/navLogos/log-in.png" class="col-s-6 nvImg"></a></li> -->
 	</ul>
 </nav>
+
 
 <!-- register -->
 	<div class="col-11 col-s-12 divOverall">
@@ -85,9 +87,6 @@
 		</div>
 	</div>
 
-
-<!-- when screen is below 600 this footer will display -->
-
 <!-- when screen is below 600 this footer will display -->
 <footer class="col-s-12 footerWhenSmall" aria-hidden="false">
 	<div class="col-s-8">
@@ -106,17 +105,16 @@
 
 
 
-
 <footer class="col-s-12 col-12 footerProperties">
 
 	<div class="col-5 col-s-4 ">
 
 		<div class="socialMediaIcons">
 			<p class="col-s-2 followUs">FOLLOW US</p>
-				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" class="imgIconSocialMedia"></a>
-				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" class="imgIconSocialMedia"></a>
+				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="fb" class="imgIconSocialMedia"></a>
+				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" alt="x.com" class="imgIconSocialMedia"></a>
+				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" alt="reddit" class="imgIconSocialMedia"></a>
+				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" alt="youtube" class="imgIconSocialMedia"></a>
 		 </div>
 		</div>
 
@@ -143,7 +141,13 @@
 		<p>CatullusAmat@clodiam.com</p>
 	</div>
 </footer>
-<script src="./js/script.js">
+
+<script>
+	// let search = document.getElementsByClassName("hideIf");
+	const search = document.querySelectorAll(".hideIf");
+	console.log(search)
+	search.forEach(x=> x.style.display='none');
 </script>
+
 </body>
 </html>

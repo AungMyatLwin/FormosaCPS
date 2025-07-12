@@ -19,7 +19,7 @@
 	<ul>
 		<li ><a href="./index.html" id="active">Home</a></li>
 		<li><a href="./salesProduct.html">Product</a></li>
-		<li><a href="./checkout.html">Cart</a></li>
+		<li><a href="./checkout.html" id="subscript">Cart 1</a></li>
 		<li><a href="./aboutUs.html">About</a></li>
 		<li><a href="./contactUs.html">Contact</a></li>
 		<li><a href="./feedback.html">Feedback</a></li>
@@ -40,7 +40,7 @@
 			<p class="col-s-12 pSeller">By Aung Lwin</p>
 		</div>
 	</div>
-		<button class="col-5 col-s-11" onclick="addtoCart('Camping Chair')">Add To Cart</button>
+		<button class="col-5 col-s-11" onclick="addtoCart(1)">Add To Cart</button>
 	</div>
 
 
@@ -53,7 +53,7 @@
 			<p class="col-s-12 pSeller">By Moe Moe</p>
 		</div>
 	</div>
-		<button class="col-5 col-s-11" onclick="addtoCart('Camera Inky Black')">Add To Cart</button>
+		<button class="col-5 col-s-11" onclick="addtoCart(2)">Add To Cart</button>
 	</div>
 
 	<div class="col-8 col-s-11 cardOverAll">		
@@ -65,7 +65,7 @@
 			<p class="col-s-12 pSeller">By Moe Moe</p>
 		</div>
 	</div>
-		<button class="col-5 col-s-11" onclick="addtoCart('Camera Hue Blue')">Add To Cart</button>
+		<button class="col-5 col-s-11" onclick="addtoCart(3)">Add To Cart</button>
 	</div>
 
 <div class="col-8 col-s-11 cardOverAll">		
@@ -77,7 +77,7 @@
 			<p class="col-s-12 pSeller">By Kay Aye</p>
 		</div>
 	</div>
-		<button class="col-5 col-s-11" onclick="addtoCart('Camera Reddish Copper')">Add To Cart</button>
+		<button class="col-5 col-s-11" onclick="addtoCart(4)">Add To Cart</button>
 	</div>
 
 </div>
@@ -170,7 +170,6 @@
 			"price":pPrice[item-1].textContent,
 			"seller":pSeller[item-1].textContent
 		}));
-
 		// console.log()
 		 // console.log(img[item].src, ptitle[item].textContent, pPrice[item].textContent, pSeller[item].textContent)
 			window.location.href = './productDetails.html'
@@ -178,11 +177,40 @@
 	}
 
 	const addtoCart=(name)=>{
+		let img = document.getElementsByClassName('imgCls');
+		let ptitle = document.getElementsByClassName('ptitle');
+		let pPrice = document.getElementsByClassName('pPrice');
+		let pSeller = document.getElementsByClassName('pSeller');
+
 		const items=JSON.parse(localStorage.getItem("AddtoCart"))||[];
-		items.push(name)
+		items.push({
+			"image":img[name-1].src,
+			"title":ptitle[name-1].textContent,
+			"price":pPrice[name-1].textContent,
+			"seller":pSeller[name-1].textContent,
+		})
 		localStorage.setItem("AddtoCart",JSON.stringify(items));
-		window.location.href = './checkout.html'
+		console.log(items)
+		alert(`${ptitle[name-1].textContent} Added`)
+		// window.location.href = './checkout.html'
 	}
+
+const itemsInCart=()=>{
+	let sub = document.getElementById('subscript')
+	// sub.style.backgroundColor = "#F0BB78"
+	sub.style.color = "#626F47"
+	sub.style.display='inline';
+	sub.textContent = `Cart`;
+	let lastindex = JSON.parse(localStorage.getItem('AddtoCart'))||[]
+	if(lastindex.length==0){
+		sub.style.display='inline';
+		sub.textContent = `Cart`;
+	}else{
+		sub.style.display='inline';
+		sub.textContent = `Cart ${ lastindex.length}`;
+	}
+}
+itemsInCart()
 
 </script>
 </body>

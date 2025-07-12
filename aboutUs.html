@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Formosa Fabella Naturae</title>
 	<link rel="icon" href="./img/logo1(1).png">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="col-12">
 	<!-- navbar -->
 <nav class="col-s-4 col-12 navbar">
 <div >
-	<img src="./img/logo1(1).png" class="col-1 imgWidth">
+	<img src="./img/logo1(1).png" alt="Company's Logo" class="col-1 imgWidth">
 	<input type="text" placeholder="Search Your Favourite Products" class="col-10 textWidth" id="search">
 	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;">
 </div>
 	<ul>
-		<li ><a href="./index.html" >Home</a></li>
+		<li ><a href="./index.html" id="active">Home</a></li>
 		<li><a href="./salesProduct.html">Product</a></li>
-		<li><a href="./checkout.html" >Cart</a></li>
-		<li><a href="./aboutUs.html"id="active">About</a></li>
+		<li><a href="./checkout.html" id="subscript">Cart 1</a></li>
+		<li><a href="./aboutUs.html">About</a></li>
 		<li><a href="./contactUs.html">Contact</a></li>
 		<li><a href="./feedback.html">Feedback</a></li>
 		<li><a href="./login.html">Sign-In</a></li>
@@ -30,14 +31,14 @@
 <nav class="col-s-1 iconsNav">
 	<ul>
 		<li>
-			<a href="./index.html"><img src="./img/navLogos/home.png" class="col-s-8 nvImg" style="transform: scale(2);"></a>
+			<a href="./index.html"><img src="./img/navLogos/home.png" alt="index logo" class="col-s-8 nvImg" style="transform: scale(2)"></a>
 		</li>
-		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" class="col-s-6 nvImg"></a></li>
-		<li><a href="checkout.html"><img src="./img/navLogos/add-to-cart.png" class="col-s-6 nvImg"></a></li>
-		<li><a href="./aboutUs.html"><img src="./img/navLogos/information.png" class="col-s-6	nvImg"></a></li>
-		<li><a href="./contactUs.html"><img src="./img/navLogos/contact.png" class="col-s-6 nvImg"></a></li>
-		<li><a href="./feedback.html"><img src="./img/navLogos/feedback.png" class="col-s-6 nvImg"></a></li>
-		<li><a href="./login.html"><img src="./img/navLogos/log-in.png" class="col-s-6 nvImg"></a></li>
+		<li><a href="./salesProduct.html"><img src="./img/navLogos/box.png" alt="products logo" class="col-s-6 nvImg"></a></li>
+		<li><a href="checkout.html"><img src="./img/navLogos/add-to-cart.png"  alt="cart logo" class="col-s-6 nvImg"></a></li>
+		<li><a href="./aboutUs.html"><img src="./img/navLogos/information.png" alt="about us logo" class="col-s-6	nvImg"></a></li>
+		<li><a href="./contactUs.html"><img src="./img/navLogos/contact.png"  alt="contact us logo" class="col-s-6 nvImg"></a></li>
+		<li><a href="./feedback.html"><img src="./img/navLogos/feedback.png" alt="feedback logo logo" class="col-s-6 nvImg"></a></li>
+		<li><a href="./login.html"><img src="./img/navLogos/log-in.png" alt="login logo" class="col-s-6 nvImg"></a></li>
 	</ul>
 </nav>
 	
@@ -50,7 +51,7 @@
 	<p style="background-color: transparent;">Join us in writing your own fabella naturae.</p>		
 	</div>
 	<div class="col-8 col-s-10 trasparentBg">
-	<img src="./img/aboutUs.jpg" class="col-s-12 col-11 aboutUsImg">		
+	<img src="./img/aboutUs.jpg" alt="aboutUsImg" class="col-s-12 col-11 aboutUsImg">		
 	</div>
 </div>
 
@@ -95,10 +96,10 @@
 
 		<div class="socialMediaIcons">
 			<p class="col-s-2 followUs">FOLLOW US</p>
-				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" class="imgIconSocialMedia"></a>
-				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" class="imgIconSocialMedia"></a>
-				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" class="imgIconSocialMedia"></a>
+				<a href="www.facebook.com"><img src="./img/socialLogos/facebook.png" alt="facebook" class="imgIconSocialMedia"></a>
+				<a href="https://x.com/?lang=en"><img src="./img/socialLogos/twitter.png" alt="twitter" class="imgIconSocialMedia"></a>
+				<a href="https://www.reddit.com/"><img src="./img/socialLogos/reddit.png" alt="reddit" class="imgIconSocialMedia"></a>
+				<a href="https://www.youtube.com/watch?v=YxOGgRy6Ylw&list=RDYxOGgRy6Ylw&start_radio=1"><img src="./img/socialLogos/youtube.png" alt="youtube" class="imgIconSocialMedia"></a>
 		 </div>
 		</div>
 
@@ -125,6 +126,24 @@
 		<p>CatullusAmat@clodiam.com</p>
 	</div>
 </footer>
+<script>
+	const itemsInCart=()=>{
+	let sub = document.getElementById('subscript')
+	// sub.style.backgroundColor = "#F0BB78"
+	sub.style.color = "#626F47"
+	sub.style.display='inline';
+	sub.textContent = `Cart`;
+	let lastindex = JSON.parse(localStorage.getItem('AddtoCart'))||[]
+	if(lastindex.length==0){
+		sub.style.display='inline';
+		sub.textContent = `Cart`;
+	}else{
+		sub.style.display='inline';
+		sub.textContent = `Cart ${ lastindex.length}`;
+	}
+}
+itemsInCart()
 
+</script>
 </body>
 </html>

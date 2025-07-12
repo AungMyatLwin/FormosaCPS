@@ -821,7 +821,62 @@ border-radius: 20px;
 	color: #626F47;
 }
 
+/*Feedback page*/
 
+.feedbackOuterDiv{
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	flex-direction: column;
+	background-color: #F5ECD5; 
+	margin-top: 10px; 
+	margin-bottom: 10px; 
+}
+.addfeedback{
+	display: flex; justify-content: center; align-items: center; flex-direction: column; background-color:#F0BB78; padding: 20px; border-radius: 20px; margin-bottom: 20px;
+}
+
+.feedbackTextProperties{
+	background-color: transparent; color: #626F47;
+	text-align: center; text-justify: center;
+}
+.feedbackRatingDiv{
+	display:flex; justify-content: center; align-items: center;
+		flex-direction: row; padding: 10px; margin: 10px; border-radius: 20px;
+}
+
+.stars{
+	margin: 10px;
+}
+
+.textAreaFeedback{
+	accent-color: #626F47;color: #626F47; border-radius: 16px; margin: 10px;
+}
+.addfeedback button{
+	accent-color: #626F47;color: #626F47; border-radius: 10px; margin: 10px; padding: 6px;
+}
+
+.customerFeedbacks{
+	display: flex; justify-content: center; align-items: center; flex-direction: row;flex-wrap:wrap; margin-top: 10px; margin-bottom: 10px; 
+}
+
+.customerFeedbackDiv{
+	display:flex; flex-direction: column; justify-content: center; align-items: center; background-color: #F0BB78; padding: 10px; margin: 10px; border-radius: 20px;
+}
+.customerProfile{
+	display:flex; flex-direction: row; justify-content: center; align-items: center; background-color: #F0BB78; margin: 10px; background-color: transparent;
+}
+
+.customerProfile img{
+	background-color: transparent;
+}
+.feedbackProperty{
+	background-color: transparent; color:#626F47 ;
+	margin: 10px;
+}
+.ratingProperty{
+	display:flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px; margin: 10px; border-radius: 20px; 
+}
 /* Responsive  */
 @media only screen and (max-width: 860px) 
 { 

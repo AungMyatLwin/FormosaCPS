@@ -19,7 +19,7 @@
 	<ul>
 		<li ><a href="./index.html" id="active">Home</a></li>
 		<li><a href="./salesProduct.html">Product</a></li>
-		<li><a href="./checkout.html">Cart</a></li>
+		<li><a href="./checkout.html" id="subscript">Cart 1</a></li>
 		<li><a href="./aboutUs.html">About</a></li>
 		<li><a href="./contactUs.html">Contact</a></li>
 		<li><a href="./feedback.html">Feedback</a></li>
@@ -212,7 +212,7 @@
 
 
 <script>
-	let elements = document.getElementsByClassName("mySlides");
+let elements = document.getElementsByClassName("mySlides");
 let initialVariable = 0;
 let opacity = 1;
 
@@ -242,6 +242,24 @@ setTimeout(()=>{
 }
 
 slider()
+
+const itemsInCart=()=>{
+	let sub = document.getElementById('subscript')
+	// sub.style.backgroundColor = "#F0BB78"
+	sub.style.color = "#626F47"
+	sub.style.display='inline';
+	sub.textContent = `Cart`;
+	let lastindex = JSON.parse(localStorage.getItem('AddtoCart'))||[]
+	if(lastindex.length==0){
+		sub.style.display='inline';
+		sub.textContent = `Cart`;
+	}else{
+		sub.style.display='inline';
+		sub.textContent = `Cart ${ lastindex.length}`;
+	}
+}
+itemsInCart()
+
 </script>
 
 </body>

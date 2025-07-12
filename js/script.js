@@ -32,9 +32,12 @@ setTimeout(()=>{
 slider()
 
 // register
-const search = document.querySelectorAll(".hideIf");
+const register=()=>{
+	const search = document.querySelectorAll(".hideIf");
 	console.log(search)
 	search.forEach(x=> x.style.display='none');
+}
+register()
 
 // productDetails
 
