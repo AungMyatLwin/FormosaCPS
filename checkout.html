@@ -14,7 +14,7 @@
 <div >
 	<img src="./img/logo1(1).png" alt="Company's Logo" class="col-1 imgWidth">
 	<input type="text" placeholder="Search Your Favourite Products" class="col-10 textWidth" id="search">
-	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;">
+	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;" onclick="alert('search!!!')">
 </div>
 	<ul>
 		<li ><a href="./index.html" id="active">Home</a></li>
@@ -42,6 +42,46 @@
 	</ul>
 </nav>
 
+<!-- Checkout -->
+<div class="col-s-12 col-12 checkoutMainDiv">
+	
+	<div class="col-6 col-s-12 checkItemsDiv" id="addItemsList" >
+	</div>
+	
+	<div class="col-6 col-s-12 checkoutPrice">
+
+		<div class="col-s-8 col-11 checkoutTotalInfos"  style="">
+			<h3 >Enter Promo Code</h3>
+
+			<div class="col-s-12 col-9 checkoutPromo">
+				<input class="col-6" placeholder="Promo Code">
+				<button class="col-6">Submit</button>
+			</div>
+			<div  class="col-s-12 col-9 checkoutCosts">
+				<p class="col-4 leftp">Shopping Cost</p>
+				<p  class="col-2 rightp">$0</p>
+			</div>
+			<div class="col-s-12 col-9 checkoutCosts">
+				<p  class="col-4 leftp">Discount</p>
+				<p  class="col-2 rightp">$0</p>
+			</div>
+			<div class="col-s-12 col-9 checkoutCosts"  >
+				<p  class="col-4 leftp" >Tax</p>
+				<p  class="col-2 rightp">$0</p>
+			</div>
+			<div class="col-s-12 col-9 checkoutCosts">
+				<p  class="col-4 leftp">Total</p>
+				<p class="col-2 rightp" id="totalPrice">$0</p>
+			</div>
+
+			<div class="col-s-12 col-9 checkoutButton">
+				<button onclick="checkoutFinal()">Checkout</button>
+			</div>
+
+		</div>
+	</div>
+	
+</div>
 
 
 
@@ -119,6 +159,50 @@ const itemsInCart=()=>{
 	}
 }
 itemsInCart()
+
+
+function additems(){
+	let itemDiv = document.getElementById('addItemsList')
+	let totalPrice= document.getElementById('totalPrice')
+	let items = JSON.parse(localStorage.getItem('AddtoCart'))
+	let total = 0;
+	items.forEach(item=>{
+		itemDiv.innerHTML+= itemsLayout(item.image,item.title,item.price, item.seller)
+		total+=removeSign(item.price)
+		// console.log(item.price, total)
+		
+	})
+
+	totalPrice.innerHTML = `$${total}`
+	// itemDiv.innerHTML+= itemsLayout("ddd","dddd","ddddd")
+}
+const removeSign=(priceInput)=>{
+	let price=priceInput.replace("$","")
+	let intprice = parseInt(price)
+	return intprice;
+}
+
+function itemsLayout(imgsrc, productName, productPrice, seller){
+	return `<div class="col-s-8 col-11 checkoutItems">
+			
+			<div class="col-s-8 col-11 checkoutImg">
+				<img  class="col-s-8 col-4 itemImgCheck" src="${imgsrc}">
+
+				<div class="col-s-11 col-11 checkoutInfo">
+					<p>${productName}</p>
+					<p>${productPrice}</p>
+			</div>
+			</div>
+		</div>`
+}
+additems()
+
+
+const checkoutFinal=()=>{
+	localStorage.clear()
+	window.location.href ="./index.html"
+}
+
 </script>
 </body>
 </html>

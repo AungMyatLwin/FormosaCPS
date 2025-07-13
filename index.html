@@ -14,7 +14,7 @@
 <div >
 	<img src="./img/logo1(1).png" alt="Company's Logo" class="col-1 imgWidth">
 	<input type="text" placeholder="Search Your Favourite Products" class="col-10 textWidth" id="search">
-	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;">
+	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;" onclick="alert('search!!!')">
 </div>
 	<ul>
 		<li ><a href="./index.html" id="active">Home</a></li>
@@ -71,7 +71,7 @@
 		<p class="textDiscount"><del class="delPrice">$458.99</del> $93.99</p>
 		<img class="col-s-6 col-7 imgProperty" alt="Pantha Sleeping Bag" src="./img/SleepingBag/sleepingbag6.png">
 		<p class="priceText"><del class="delPrice">$458.99</del> $93.99</p>
-		<button class="col-3 btnProperty">Buy Now</button>
+		<button class="col-3 btnProperty" onclick="buyNow('Pantha Sleeping Bag','$93.99','./img/SleepingBag/sleepingbag6.png')">Buy Now</button>
 	</div>
 
 		<div class="overlay col-5	col-s-7">
@@ -80,7 +80,7 @@
 			<p class="textDiscount"><del class="delPrice">$200.99</del> $93.99</p>
 			<img class="col-s-6 col-7 imgProperty" alt="Water Carrier" src="./img/WaterCarrier/waterCarrier1.jpg">
 			<p class="priceText"><del class="delPrice">$200.99</del> $93.99</p>
-			<button class="col-3 btnProperty">Buy Now</button>
+			<button class="col-3 btnProperty"  onclick="buyNow('Water Carrier','$93.99','./img/WaterCarrier/waterCarrier1.jpg')">Buy Now</button>
 		</div>
 
 
@@ -90,7 +90,7 @@
 			<p class="textDiscount"><del class="delPrice">$132.99</del> $64.99</p>
 			<img class="col-s-6 col-7 imgProperty" alt="3-Burner Stove" src="./img/Stove/stove.jpg">
 			<p class="priceText"><del class="delPrice">$132.99</del> $64.99</p>
-			<button class="col-3 btnProperty">Buy Now</button>
+			<button class="col-3 btnProperty" onclick="buyNow('3-Burner Stove','$64.99', './img/Stove/stove.jpg')">Buy Now</button>
 		</div>
 
 
@@ -100,7 +100,7 @@
 			<p class="textDiscount"><del class="delPrice">$988.99</del> $699.99</p>
 			<img class="col-s-6 col-7 imgProperty" alt="A998 Tent" src="./img/Tent/tent1.jpg">
 			<p class="priceText"><del class="delPrice">$988.99</del> $699.99</p>
-			<button class="col-3 btnProperty">Buy Now</button>
+			<button class="col-3 btnProperty" onclick="buyNow('A998 Tent','$699.99', './img/Tent/tent1.jpg')">Buy Now</button>
 		</div>
 </div>
 
@@ -112,7 +112,7 @@
 		<p class="col-4 col-s-8">A998 Tent</p>
 	<img src="./img/Tent/tent1.jpg" alt="A998 Tent" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-4 col-s-7">Add To Cart</button>
+	<button class="col-4 col-s-7" onclick="buyNow('A998 Tent','$699.99', './img/Tent/tent1.jpg')">Add To Cart</button>
 	</div>
 
 
@@ -120,35 +120,35 @@
 		<p class="col-4 col-s-8">Sleeping Bag</p>
 	<img src="./img/SleepingBag/sleepingbag6.png" alt="Sleeping Bag" class="col-7 col-s-9 imgSize">
 	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-4 col-s-7">Add To Cart</button>
+	<button class="col-4 col-s-7" onclick="buyNow('Sleeping Bag','$93.99', './img/SleepingBag/sleepingbag6.png')">Add To Cart</button>
 	</div>
 
 	<div class="col-5 col-s-5 cardItems">
 		<p class="col-5 col-s-8">Camping Chair</p>
 	<img src="./img/Chair/campChair.jpg" alt="camping Chair" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$89.99</p>
-	<button class="col-5 col-s-7">Add To Cart</button>
+	<button class="col-5 col-s-7" onclick="buyNow('Camping Chair','$89.99', './img/Chair/campChair.jpg')">Add To Cart</button>
 	</div>
 
 	<div class="col-5 col-s-5 cardItems">
 		<p class="col-5 col-s-8">Yeti Cooler</p>
 	<img src="./img/cooler/yetiCooler1.png" alt="Yeti Cooler" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$23.99</p>
-	<button class="col-5 col-s-7">Add To Cart</button>
+	<button class="col-5 col-s-7" onclick="buyNow('Yeti Cooler','$23.99', './img/cooler/yetiCooler1.png')">Add To Cart</button>
 	</div>
 
 	<div class="col-5 col-s-5 cardItems">
 		<p class="col-5 col-s-8">Water Carrier</p>
 	<img src="./img/WaterCarrier/waterCarrier1.jpg" alt="Water Carrier" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$93.99</p>
-	<button class="col-5 col-s-7">Add To Cart</button>
+	<button class="col-5 col-s-7" onclick="buyNow('Water Carrier','$93.99', './img/WaterCarrier/waterCarrier1.jpg')">Add To Cart</button>
 	</div>
 
 	<div class="col-5 col-s-5 cardItems">
 		<p class="col-5 col-s-8">3-Burner Stove</p>
 	<img src="./img/Stove/stove.jpg" alt="3-Burner Stove" class="col-7 col-s-9">
 	<p class="col-4 col-s-5">$64.99</p>
-	<button class="col-5 col-s-7">Add To Cart</button>
+	<button class="col-5 col-s-7" onclick="buyNow('3-Burner Stove','$64.99', './img/Stove/stove.jpg')">Add To Cart</button>
 	</div>
 
 
@@ -259,6 +259,19 @@ const itemsInCart=()=>{
 	}
 }
 itemsInCart()
+
+function buyNow(name, price, imgsrc){
+let lastindex = JSON.parse(localStorage.getItem('AddtoCart'))||[]
+const items=JSON.parse(localStorage.getItem("AddtoCart"))||[];
+		items.push({
+			"image":imgsrc,
+			"title":name,
+			"price":price,
+			"seller":"",
+		})
+		localStorage.setItem("AddtoCart",JSON.stringify(items));
+		window.location.href = './checkout.html';
+}
 
 </script>
 

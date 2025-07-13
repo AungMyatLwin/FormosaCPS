@@ -14,7 +14,7 @@
 <div >
 	<img src="./img/logo1(1).png" alt="Company's Logo" class="col-1 imgWidth">
 	<input type="text" placeholder="Search Your Favourite Products" class="col-10 textWidth" id="search">
-	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;">
+	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;" onclick="alert('search!!!')">
 </div>
 	<ul>
 		<li ><a href="./index.html" id="active">Home</a></li>
@@ -49,48 +49,20 @@
 		<h3 class="col-s-11 col-10 feedbackTextProperties">We value your opinions</h3>
 		<p class="col-s-11 col-10 feedbackTextProperties">How would you rate your overall experiences?</p>
 		<div class="col-5 col-s-11 feedbackRatingDiv">
-			<img class="col-1 col-s-1 stars"  alt="ratingstar" src="./img/star.png">
-			<img class="col-1  col-s-1 stars" alt="ratingstar"  src="./img/star.png">
-			<img class="col-1  col-s-1 stars" alt="ratingstar"  src="./img/star.png">
-			<img class="col-1  col-s-1 stars" alt="ratingstar" src="./img/star.png">
-			<img class="col-1  col-s-1 stars"  alt="ratingstar" src="./img/star.png">
+			<img class="col-1 col-s-1 stars"  alt="ratingstar" data-index="1" src="./img/star.png">
+			<img class="col-1  col-s-1 stars" alt="ratingstar" data-index="2"  src="./img/star.png">
+			<img class="col-1  col-s-1 stars" alt="ratingstar" data-index="3"  src="./img/star.png">
+			<img class="col-1  col-s-1 stars" alt="ratingstar" data-index="4" src="./img/star.png">
+			<img class="col-1  col-s-1 stars"  alt="ratingstar" data-index="5" src="./img/star.png">
 		</div>
 		<p class="feedbackTextProperties">Kindly take a moment to tell us what you think</p>
-		<textarea rows="9" cols="66" class="col-9 col-s-12 textAreaFeedback"></textarea>
+		<input type="text" class="col-5 col-s-6 inputName" placeholder="Name" id="idname" name="name" required>
+		<textarea rows="9" cols="66" class="col-9 col-s-12 textAreaFeedback" id="feedbackTextArea"></textarea>
 		<button onclick="addFeedback()">Share my feedback</button>
 	</div>
 
 
 	<div class="col-s-11 col-11 customerFeedbacks"  id="addFeedbackID">
-
-		<div class="col-5 col-s-12 customerFeedbackDiv">
-			<div class="col-5 customerProfile">
-				<img class="col-2 col-s-2" alt="profileImg" src="./img/socialLogos/reddit.png">
-				<p class="feedbackProperty">Customer Name</p>
-			</div>
-			<p class="feedbackProperty">I love this website, it sells everything I need</p>
-			<div class="col-5 ratingProperty">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-			</div>
-		</div>
-
-		<div class="col-5 col-s-12 customerFeedbackDiv">
-			<div class="col-5 customerProfile">
-				<img class="col-2 col-s-2" alt="profileImg" src="./img/socialLogos/reddit.png">
-				<p class="feedbackProperty">Customer Name</p>
-			</div>
-			<p class="feedbackProperty">I love this website, it sells everything I need</p>
-			<div class="col-5 ratingProperty">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar"  src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-			</div>
-		</div>
-
 	</div>
 </div>
 
@@ -149,23 +121,56 @@
 	</div>
 </footer>
 <script>
+	let ratingStar=0;
 	function addFeedback(){
+		let name =document.getElementById('idname').value;
+		let feedback = document.getElementById('feedbackTextArea').value
+		// console.log(feedback,"fff")
 		let feedbackDiv = `<div class="col-5 col-s-12 customerFeedbackDiv">
 			<div class="col-5 customerProfile">
-				<img class="col-2 col-s-2" alt="profileImg" src="./img/socialLogos/reddit.png">
-				<p class="feedbackProperty">Customer Name</p>
+				<img class="col-2 col-s-2" alt="profileImg" src="./img/user.png">
+				<p class="feedbackProperty">${name}</p>
 			</div>
-			<p class="feedbackProperty">I love this website, it sells everything I need</p>
+			<p class="feedbackProperty">${feedback}</p>
 			<div class="col-5 ratingProperty">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
-				<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">
+				${starsDynamic()}
 			</div>
 		</div>`
 
-		document.getElementById('addFeedbackID').innerHTML+=feedbackDiv;
+		// document.getElementById('addFeedbackID').innerHTML+=feedbackDiv;
+		document.getElementById('addFeedbackID').insertAdjacentHTML("afterbegin", feedbackDiv);
 	}
+	function starsDynamic(){
+		let imghtml = `<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">`
+		return `<div class="col-5 ratingProperty">` + imghtml.repeat(ratingStar) + `</div>`;
+	}
+
+	function rating(){
+		let stars = document.querySelectorAll(".stars");
+		console.log(stars)
+		stars.forEach(star=>{
+			let starsControl = [false,false,false,false,false]
+			star.addEventListener('click',()=>{
+				// data-index here?
+				let end = parseInt(star.dataset.index);
+				ratingStar=end
+				for(let i=0;i<=end-1;i++){
+					if(starsControl[i]===false)
+					{
+						stars[i].style.filter = "contrast(400%)"
+						stars[i].style.borderRadius="20px"
+
+						starsControl[i]=true
+					}else{
+						stars[i].style.filter = "contrast(100%)"
+					starsControl[i]=false
+					}
+				}
+			})
+		})
+		
+	}
+	rating()
 </script>
 </body>
 </html>

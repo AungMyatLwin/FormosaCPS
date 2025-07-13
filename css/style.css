@@ -848,9 +848,18 @@ border-radius: 20px;
 .stars{
 	margin: 10px;
 }
+.inputName{
+	border-radius: 20px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	text-justify: center;
+}
 
 .textAreaFeedback{
 	accent-color: #626F47;color: #626F47; border-radius: 16px; margin: 10px;
+	text-align: center;
+	text-justify: center;
 }
 .addfeedback button{
 	accent-color: #626F47;color: #626F47; border-radius: 10px; margin: 10px; padding: 6px;
@@ -877,6 +886,109 @@ border-radius: 20px;
 .ratingProperty{
 	display:flex; flex-direction: row; justify-content: center; align-items: center; padding: 10px; margin: 10px; border-radius: 20px; 
 }
+
+
+/*Checkout*/
+.checkoutMainDiv{
+display: flex; 
+justify-content: center; 
+align-items: center; 
+flex-direction: row; 
+}
+.checkItemsDiv{
+	display:flex; 
+	justify-content:
+	center; align-items: center; 
+	flex-direction: column;
+}
+.checkoutItems{
+	display:flex; 
+	justify-content: center; 
+	align-items: center;
+	flex-direction: column; 
+	 background-color: #F0BB78;
+	 padding: 20px; margin: 20px;  
+	 border-radius: 20px;
+}
+
+
+
+.checkoutImg{
+	display:flex;
+	 justify-content: center; 
+	 align-items: center;
+	 flex-direction: row;  
+	 background-color: #F0BB78;
+	 padding: 10px; 
+	 margin: 10px;
+}
+.itemImgCheck{
+	border-radius: 20px;
+}
+
+.checkoutInfo{
+	display:flex; 
+	justify-content: center;
+	 align-items: center;
+	 flex-direction: column;  
+	 background-color: #F0BB78;
+	 padding: 10px; 
+	 margin: 10px;
+}
+.checkoutInfo p{
+	background-color:transparent;
+	color: #626F47;
+}
+.checkoutItems p{
+	background-color:transparent;
+	color: #626F47;
+}
+
+.checkoutPrice{
+	display:flex; justify-content: center; align-items: center;flex-direction: column;  background-color: transparent;
+}
+
+.checkoutTotalInfos{
+	display:flex; justify-content: center; align-items: center;flex-direction: column;   background-color: #F0BB78;padding: 20px;margin: 20px; border-radius: 20px;
+}
+
+.checkoutTotalInfos h3{
+	background-color: transparent; color: #626F47;
+}
+
+.checkoutPromo{
+	display:flex; justify-content: space-evenly; align-items: center;flex-direction: row; padding: 10px; border-top-left-radius: 20px;border-top-right-radius: 20px;
+}
+
+.checkoutPromo input{
+	padding: 5px; margin: 4px; border-radius: 10px; text-align: center;
+}
+
+.checkoutPromo button{
+	padding: 5px; margin: 4px; color: #626F47; border-radius: 20px;
+}
+
+.checkoutCosts{
+	display:flex; justify-content: space-evenly; align-items: center;flex-direction: row;
+}
+.leftp{
+	margin: 10px; padding: 10px; text-align: left; text-justify: inter-word;
+	color: #626F47;
+}
+.rightp{
+	margin: 10px; padding: 10px; text-align: right; text-justify: inter-word;
+	color: #626F47;
+}
+
+
+.checkoutButton{
+	display:flex; justify-content: space-evenly; align-items: left;flex-direction: row; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px ;
+}
+
+.checkoutButton button{
+	padding:10px; margin: 10px; border-radius: 20px; color: #626F47;
+}
+
 /* Responsive  */
 @media only screen and (max-width: 860px) 
 { 
@@ -1139,6 +1251,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+}
+
+.checkoutMainDiv{
+	display: flex; justify-content: center; align-items: center; flex-direction: column;
 }
 
 }
