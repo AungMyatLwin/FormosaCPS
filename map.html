@@ -17,12 +17,12 @@
 	<input type="image"  src="./img/search.png" alt="Submit" width="30" height="30" style="background:transparent; padding: 2px; margin: 10px;" onclick="alert('search!!!')">
 </div>
 	<ul>
-		<li ><a href="./index.html">Home</a></li>
+		<li ><a href="./index.html" id="active">Home</a></li>
 		<li><a href="./salesProduct.html">Product</a></li>
-<li><a href="./checkout.html" id="subscript">Cart 1</a></li>
+		<li><a href="./checkout.html" id="subscript">Cart 1</a></li>
 		<li><a href="./aboutUs.html">About</a></li>
 		<li><a href="./contactUs.html">Contact</a></li>
-		<li><a href="./feedback.html" id="active">Feedback</a></li>
+		<li><a href="./feedback.html">Feedback</a></li>
 		<li><a href="./login.html">Sign-In</a></li>
 	</ul>
 </nav>
@@ -41,30 +41,16 @@
 		<li><a href="./login.html"><img src="./img/navLogos/log-in.png" alt="login logo" class="col-s-6 nvImg"></a></li>
 	</ul>
 </nav>
+	
 
 
-
-<div class="col-s-12 col-12 feedbackOuterDiv">
-	<div class="col-10 col-s-11 addfeedback">
-		<h3 class="col-s-11 col-3 feedbackTextProperties">We value your opinions</h3>
-		<p class="col-s-11 col-4 feedbackTextProperties">How would you rate your overall experiences?</p>
-		<div class="col-5 col-s-11 feedbackRatingDiv">
-			<img class="col-1 col-s-1 stars"  alt="ratingstar" data-index="1" src="./img/star.png">
-			<img class="col-1  col-s-1 stars" alt="ratingstar" data-index="2"  src="./img/star.png">
-			<img class="col-1  col-s-1 stars" alt="ratingstar" data-index="3"  src="./img/star.png">
-			<img class="col-1  col-s-1 stars" alt="ratingstar" data-index="4" src="./img/star.png">
-			<img class="col-1  col-s-1 stars"  alt="ratingstar" data-index="5" src="./img/star.png">
-		</div>
-		<p class="feedbackTextProperties">Kindly take a moment to tell us what you think</p>
-		<input type="text" class="col-5 col-s-6 inputName" placeholder="Name" id="idname" name="name" required>
-		<textarea rows="9" cols="66" class="col-9 col-s-12 textAreaFeedback" id="feedbackTextArea"></textarea>
-		<button onclick="addFeedback()">Share my feedback</button>
+<div class="col-s-12 col-12 structurePrivacy" >
+	<div  class="col-s-8 col-7 structurePrivacy">
+		<iframe  class="col-s-12 col-7" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2579.134536312292!2d-106.53912032539286!3d35.126148460268496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87227557938908eb%3A0x723dd3cf63dbb051!2s3828%20Piermont%20Dr%20NE%2C%20Albuquerque%2C%20NM%2087111%2C%20USA!5e1!3m2!1sen!2smm!4v1753272398126!5m2!1sen!2smm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
-
-
-	<div class="col-s-11 col-11 customerFeedbacks"  id="addFeedbackID">
-	</div>
+	
 </div>
+
 
 <!-- when screen is below 600 this footer will display -->
 <footer class="col-s-12 footerWhenSmall" aria-hidden="false">
@@ -109,7 +95,7 @@
 			<p>Call us</p>
 		<p>+95-9449440222</p>
 		<p>+95-9449440233</p>
-<a href="./map.html"><p>See on Map</p></a>
+	<a href="#"><p>See on Map</p></a>
 		
 	</div>
 
@@ -121,57 +107,6 @@
 	</div>
 </footer>
 <script>
-	let ratingStar=0;
-	function addFeedback(){
-		let name =document.getElementById('idname').value;
-		let feedback = document.getElementById('feedbackTextArea').value
-		// console.log(feedback,"fff")
-		let feedbackDiv = `<div class="col-5 col-s-12 customerFeedbackDiv">
-			<div class="col-5 customerProfile">
-				<img class="col-2 col-s-2" alt="profileImg" src="./img/user.png">
-				<p class="feedbackProperty">${name}</p>
-			</div>
-			<p class="feedbackProperty">${feedback}</p>
-			<div class="col-5 ratingProperty">
-				${starsDynamic()}
-			</div>
-		</div>`
-
-		// document.getElementById('addFeedbackID').innerHTML+=feedbackDiv;
-		document.getElementById('addFeedbackID').insertAdjacentHTML("afterbegin", feedbackDiv);
-	}
-	function starsDynamic(){
-		let imghtml = `<img class="col-2 col-s-2" alt="ratingstar" src="./img/star.png">`
-		return `<div class="col-5 ratingProperty">` + imghtml.repeat(ratingStar) + `</div>`;
-	}
-
-	function rating(){
-		let stars = document.querySelectorAll(".stars");
-		console.log(stars)
-		stars.forEach(star=>{
-			let starsControl = [false,false,false,false,false]
-			star.addEventListener('click',()=>{
-				// data-index here?
-				let end = parseInt(star.dataset.index);
-				ratingStar=end
-				for(let i=0;i<=end-1;i++){
-					if(starsControl[i]===false)
-					{
-						stars[i].style.filter = "contrast(400%)"
-						stars[i].style.borderRadius="20px"
-
-						starsControl[i]=true
-					}else{
-						stars[i].style.filter = "contrast(100%)"
-					starsControl[i]=false
-					}
-				}
-			})
-		})
-		
-	}
-	rating()
-
 	const itemsInCart=()=>{
 	let sub = document.getElementById('subscript')
 	// sub.style.backgroundColor = "#F0BB78"
@@ -188,6 +123,7 @@
 	}
 }
 itemsInCart()
+
 </script>
 </body>
 </html>
