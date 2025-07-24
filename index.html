@@ -261,6 +261,7 @@ const itemsInCart=()=>{
 itemsInCart()
 
 function buyNow(name, price, imgsrc){
+	alert("Item added the cart")
 let lastindex = JSON.parse(localStorage.getItem('AddtoCart'))||[]
 const items=JSON.parse(localStorage.getItem("AddtoCart"))||[];
 		items.push({
